@@ -1,0 +1,18 @@
+# Dependencias que no usa la web (es HTML, CSS y JS sin build)
+node_modules/
+package.json
+package-lock.json
+
+# Mockups originales de Kipack (la web usa las versiones .webp de img/proyectos/kipack)
+img/proyectos/este-portfolio/kipack/
+
+# Editor y Vercel
+.vscode/
+.vercel/
+
+.vercel
+.env*
+
+# Fotos personales originales (la web usa las versiones reducidas avatar*.webp)
+img/personal/me.webp
+img/personal/me-avatar.webp

@@ -1,0 +1,185 @@
+/* ==========================================================
+   Layout: nav, hero (estructura), secciones, footer
+   ========================================================== */
+
+/* ---------- Nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--c-bg) 85%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--c-border) 60%, transparent);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: var(--nav-h);
+}
+.nav__logo {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+}
+.nav__dot { color: var(--c-accent); }
+.nav__links {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+}
+.nav__links a {
+  text-decoration: none;
+  font-weight: 500;
+  padding-block: 6px;
+  background: linear-gradient(currentColor, currentColor) left bottom / 0 2px no-repeat;
+  transition: background-size .25s var(--ease-out);
+}
+.nav__links a:hover { background-size: 100% 2px; }
+.nav__tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  .nav { gap: 12px; }
+  .nav__links { display: none; }
+  .nav__tools { margin-left: auto; }
+}
+
+/* ---------- Hero / mesa (estructura base) ---------- */
+.hero { padding-block: 24px 48px; }
+
+.desk {
+  position: relative;
+  min-height: clamp(700px, calc(100vh - var(--nav-h) - 48px), 780px);
+  display: grid;
+  place-items: center;
+  padding: 48px 24px;
+  border-radius: var(--radius-lg);
+  background-color: var(--c-desk);
+  background-image: radial-gradient(var(--c-desk-dot) 1.5px, transparent 1.6px);
+  background-size: 24px 24px;
+  background-position: 12px 12px;
+  overflow: hidden;
+  isolation: isolate; /* los z-index de los objetos no salen de la mesa */
+  transition: background-color .3s;
+}
+
+.desk__headline {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  text-align: center;
+}
+.hero__title {
+  margin-block: 0 22px;
+  font-size: clamp(2.8rem, 6.6vw, 6rem);
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -.045em;
+}
+.hero__line {
+  display: block;
+  white-space: nowrap;
+}
+/* Punto final: círculo naranja de acento (el "." sigue en el texto para lectores) */
+.hero__dot {
+  display: inline-block;
+  width: .25em;
+  height: .25em;
+  margin-left: .05em;
+  border-radius: 50%;
+  background: var(--c-accent);
+  color: transparent;
+  line-height: 0;
+  overflow: hidden;
+  vertical-align: baseline;
+}
+
+.hero__lead {
+  max-width: 44ch;
+  margin-inline: auto;
+  font-size: clamp(1.0625rem, 1.4vw, 1.2rem);
+  color: var(--c-muted);
+}
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* ---------- Secciones ---------- */
+.section { padding-block: clamp(56px, 8vw, 96px); }
+.section + .section { padding-top: 0; }
+.section__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 32px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding-block: 32px;
+  color: var(--c-muted);
+  border-top: 1px solid var(--c-border);
+}
+
+
+/* ---------- Estado de disponibilidad (hero) ---------- */
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: var(--c-muted);
+}
+.status-dot {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #2E9E6B;
+}
+.status-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #2E9E6B;
+  animation: ping 2s ease-out infinite;
+}
+@keyframes ping {
+  to { transform: scale(2.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .status-dot::after { animation: none; }
+}
+
+/* Con 4 enlaces, el menú pasa a modo compacto antes */
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .nav__tools { margin-left: auto; }
+}
+
+@media (max-width: 480px) {
+  .nav__cta-long { display: none; }
+}
+.nav__tools .btn--sm { gap: .3em; }
+.nav__links a[aria-current="page"] { background-size: 100% 2px; color: var(--c-accent-text); }
+
+/* Escritorio estrecho: menú más compacto para que quepa todo */
+@media (max-width: 1100px) {
+  .nav { gap: 16px; }
+  .nav__links { gap: 20px; }
+  .nav__cta-long { display: none; }
+}
+@media (max-width: 480px) {
+  .hero__status { font-size: .6875rem; }
+}

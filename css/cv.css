@@ -1,0 +1,138 @@
+/* ==========================================================
+   CV imprimible (/cv/): hoja A4 en pantalla y al imprimir
+   ========================================================== */
+
+.cv-page { padding-block: 24px 64px; }
+.cv-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 210mm;
+  margin: 0 auto 20px;
+}
+.cv-toolbar__hint { color: var(--c-muted); font-size: .875rem; }
+
+/* La hoja: siempre papel blanco, en claro y en oscuro */
+.cv-sheet {
+  --ink: #16202E;
+  --muted: #4A5868;
+  --line: #D5DEE8;
+  --accent: #C23A12;
+  max-width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 16mm 15mm;
+  background: #FFFFFF;
+  color: var(--ink);
+  font-size: 10pt;
+  line-height: 1.5;
+  box-shadow: var(--shadow-lg);
+  border-radius: 6px;
+}
+.cv-sheet a { color: inherit; text-decoration: none; }
+
+.cv-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 3px solid #FF5B2E;
+}
+.cv-head__photo {
+  width: 26mm;
+  height: 26mm;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.cv-head__name {
+  font: 800 22pt/1.05 var(--f-display);
+  letter-spacing: -.03em;
+}
+.cv-head__role {
+  margin-top: 4px;
+  font: 500 11pt/1.3 var(--f-mono);
+  color: var(--accent);
+}
+
+.cv-cols {
+  display: grid;
+  grid-template-columns: 1fr 62mm;
+  gap: 9mm;
+}
+.cv-sec + .cv-sec { margin-top: 12px; }
+.cv-sec h2 {
+  margin-bottom: 6px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--line);
+  font: 700 10.5pt/1.3 var(--f-display);
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.cv-item + .cv-item { margin-top: 8px; }
+.cv-item__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.cv-item h3 { font: 700 10pt/1.35 var(--f-body); }
+.cv-item h3 span { font-weight: 400; color: var(--muted); }
+.cv-item__date {
+  flex: none;
+  font: 500 8.5pt/1.3 var(--f-mono);
+  color: var(--accent);
+  white-space: nowrap;
+}
+.cv-item__sub { color: var(--muted); font-size: 9pt; }
+.cv-item ul { margin: 3px 0 0; padding-left: 1.1em; }
+.cv-item li + li { margin-top: 1px; }
+.cv-item p { margin-top: 2px; }
+.cv-note { margin-top: 8px; font-size: 8.5pt; color: var(--muted); }
+.cv-note a { color: var(--accent); }
+
+.cv-side .cv-item__head { display: block; }
+.cv-side .cv-item__date { display: block; margin-top: 1px; }
+.cv-contact { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; font-size: 9pt; }
+.cv-contact li { display: flex; align-items: center; gap: 6px; overflow-wrap: anywhere; }
+.cv-contact svg {
+  flex: none;
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.cv-skill + .cv-skill { margin-top: 6px; }
+.cv-skill h4 { font: 700 9pt/1.3 var(--f-body); }
+.cv-skill p { font-size: 8.5pt; color: var(--muted); }
+.cv-langs { margin: 0; padding: 0; list-style: none; font-size: 9pt; }
+.cv-langs li { display: flex; justify-content: space-between; }
+.cv-langs li span:last-child { color: var(--muted); }
+
+@media (max-width: 760px) {
+  .cv-sheet { padding: 24px 18px; min-height: 0; }
+  .cv-cols { grid-template-columns: 1fr; }
+}
+
+/* ---------- Impresión ---------- */
+@page { size: A4; margin: 0; }
+@media print {
+  html, body { background: #FFFFFF !important; }
+  .site-header, .site-footer, .cv-toolbar, .skip-link, .cookies, .term { display: none !important; }
+  .cv-page { padding: 0; }
+  .cv-sheet {
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .cv-cols { grid-template-columns: 1fr 62mm; }
+  .cv-item { break-inside: avoid; }
+}

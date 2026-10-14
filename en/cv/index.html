@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV · Jesús Guerrero</title>
+  <meta name="description" content="Résumé of Jesús Guerrero, web developer in Granada, Spain.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E141C" media="(prefers-color-scheme: dark)">
+
+  <!-- Idiomas (si cambias de dominio, actualízalo aquí y en las demás páginas) -->
+  <link rel="canonical" href="https://portfolio-jesus-guerrero.vercel.app/en/cv/">
+  <link rel="alternate" hreflang="es" href="https://portfolio-jesus-guerrero.vercel.app/cv/">
+  <link rel="alternate" hreflang="en" href="https://portfolio-jesus-guerrero.vercel.app/en/cv/">
+  <link rel="alternate" hreflang="x-default" href="https://portfolio-jesus-guerrero.vercel.app/cv/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:title" content="CV · Jesús Guerrero">
+  <meta property="og:description" content="Résumé of Jesús Guerrero, web developer in Granada, Spain.">
+  <meta property="og:type" content="website">
+
+  <!-- Theme before first paint, avoids flashing -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="preload" href="/fonts/figtree-latin-1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/unbounded-latin-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css?v=48">
+
+  <link rel="stylesheet" href="/css/base.css?v=48">
+  <link rel="stylesheet" href="/css/layout.css?v=48">
+  <link rel="stylesheet" href="/css/desk.css?v=48">
+  <link rel="stylesheet" href="/css/sheet.css?v=48">
+  <link rel="stylesheet" href="/css/components.css?v=48">
+  <link rel="stylesheet" href="/css/legal.css?v=48">
+  <link rel="stylesheet" href="/css/extras.css?v=48">
+  <link rel="stylesheet" href="/css/cv.css?v=48">
+
+  <script type="module" src="/js/cv-page.js?v=48"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav__logo" href="/en/">jesús guerrero<span class="nav__dot">.</span></a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="/en/">Home</a></li>
+        <li><a href="/en/projects/">Projects</a></li>
+        <li><a href="/en/#experience">Experience</a></li>
+        <li><a href="/en/#skills">Skills</a></li>
+        <li><a href="/en/#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__tools">
+        <a class="icon-btn mono" href="/cv/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <button class="icon-btn" type="button" id="theme-toggle" aria-pressed="false">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <a class="btn btn--accent btn--sm" href="/en/cv/"><span class="nav__cta-long">My </span>CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="cv-page">
+    <div class="cv-toolbar container">
+      <a class="page-head__back mono" href="/en/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>Back to portfolio</a>
+      <button class="btn btn--accent" type="button" id="cv-print"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v7H7z"/></svg>Print or save as PDF</button>
+      <p class="cv-toolbar__hint">Tip: in the print dialog choose "Save as PDF" and turn off headers and footers.</p>
+    </div>
+    <div class="cv-sheet" id="cv"></div>
+  </main>
+
+  <footer class="site-footer container">
+    <p class="mono">© <span id="year"></span> Jesús Guerrero</p>
+    <ul class="footer-legal" role="list">
+      <li><a href="/en/legal-notice/">Legal notice</a></li>
+      <li><a href="/en/privacy/">Privacy</a></li>
+      <li><a href="/en/cookies/">Cookies</a></li>
+      <li><button type="button" data-cookie-settings>Cookie settings</button></li>
+      <li><button type="button" data-open-terminal>&gt;_ Terminal</button></li>
+    </ul>
+  </footer>
+</body>
+</html>

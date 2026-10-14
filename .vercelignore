@@ -1,0 +1,11 @@
+servidor-dev.mjs
+README.md
+.vscode
+node_modules
+package.json
+package-lock.json
+img/proyectos/este-portfolio/kipack
+.env.local
+.vercel
+img/personal/me.webp
+img/personal/me-avatar.webp

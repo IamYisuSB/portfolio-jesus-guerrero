@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jesús Guerrero · Desarrollador web</title>
+  <meta name="description" content="Portfolio de Jesús Guerrero, desarrollador web en Granada. WordPress, WooCommerce y JavaScript.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E141C" media="(prefers-color-scheme: dark)">
+
+  <!-- Idiomas (si cambias de dominio, actualízalo aquí y en las demás páginas) -->
+  <link rel="canonical" href="https://portfolio-jesus-guerrero.vercel.app/">
+  <link rel="alternate" hreflang="es" href="https://portfolio-jesus-guerrero.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://portfolio-jesus-guerrero.vercel.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://portfolio-jesus-guerrero.vercel.app/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:title" content="Jesús Guerrero · Desarrollador web">
+  <meta property="og:description" content="Portfolio de Jesús Guerrero, desarrollador web en Granada. WordPress, WooCommerce y JavaScript.">
+  <meta property="og:type" content="website">
+
+  <!-- Tema antes de pintar, para evitar parpadeo -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="preload" href="/fonts/figtree-latin-1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/unbounded-latin-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css?v=48">
+
+  <link rel="stylesheet" href="/css/base.css?v=48">
+  <link rel="stylesheet" href="/css/layout.css?v=48">
+  <link rel="stylesheet" href="/css/desk.css?v=48">
+  <link rel="stylesheet" href="/css/sheet.css?v=48">
+  <link rel="stylesheet" href="/css/components.css?v=48">
+  <link rel="stylesheet" href="/css/legal.css?v=48">
+  <link rel="stylesheet" href="/css/extras.css?v=48">
+
+  <script type="module" src="/js/main.js?v=48"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principal">
+      <a class="nav__logo" href="#top">jesús guerrero<span class="nav__dot">.</span></a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav__tools">
+        <a class="icon-btn mono" href="/en/" hreflang="en" lang="en" aria-label="English version">EN</a>
+        <button class="icon-btn" type="button" id="theme-toggle" aria-pressed="false">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <a class="btn btn--accent btn--sm" href="/cv/"><span class="nav__cta-long">Mi </span>CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO / MESA — los objetos los pinta js/desk.js -->
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="desk" id="desk">
+        <div class="desk__headline">
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__line">Hola, soy</span>
+            <span class="hero__line"><span class="hero__name">Jesús</span><span class="hero__dot">.</span></span>
+          </h1>
+          <p class="hero__lead">Desarrollador web en Granada. Construyo webs y tiendas online con WordPress, WooCommerce y JavaScript, cuidando el detalle visual y el rendimiento.</p>
+          <div class="hero__actions">
+            <a class="btn btn--ink" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--ghost" href="/cv/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>Ver mi CV</a>
+          </div>
+          <p class="hero__status mono"><span class="status-dot" aria-hidden="true"></span>Disponible para incorporarme a un equipo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS — los pinta js/projects.js desde js/data/projects.js -->
+    <section class="section container" id="proyectos" aria-labelledby="projects-title">
+      <div class="section__head">
+        <h2 class="section__title" id="projects-title">Proyectos destacados</h2>
+        <p class="section__intro">Profesionales, personales y de formación. Filtra por tipo y abre cualquiera para ver capturas, mi rol y las herramientas que usé.</p>
+      </div>
+      <div class="filters" id="project-filters" role="group" aria-label="Filtrar proyectos por tipo"></div>
+      <p class="visually-hidden" id="filter-status" role="status"></p>
+      <ul class="cards cards--grid" id="project-grid" role="list" data-limit="6"></ul>
+      <div class="more">
+        <a class="btn btn--ink" id="more-projects" href="/proyectos/">Ver todos los proyectos <span class="more__count mono" id="more-count" aria-hidden="true"></span><span class="more__arrow" aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA — la pinta js/experience.js desde js/data/experience.js -->
+    <section class="section container" id="experiencia" aria-labelledby="exp-title">
+      <div class="section__head">
+        <h2 class="section__title" id="exp-title">Experiencia y formación</h2>
+        <p class="section__intro">Mi trayectoria como desarrollador web: el trabajo con clientes reales y la formación que la respalda.</p>
+      </div>
+      <div class="path">
+        <div class="path__col">
+          <h3 class="path__title"><span class="path__badge path__badge--work" aria-hidden="true"></span>Experiencia</h3>
+          <ol class="tl" id="exp-jobs" role="list"></ol>
+        </div>
+        <div class="path__col">
+          <h3 class="path__title"><span class="path__badge path__badge--edu" aria-hidden="true"></span>Formación</h3>
+          <ol class="tl" id="exp-education" role="list"></ol>
+        </div>
+      </div>
+      <div class="langs">
+        <h3 class="langs__title">Idiomas</h3>
+        <ul class="langs__list" id="exp-languages" role="list"></ul>
+      </div>
+    </section>
+
+    <!-- HABILIDADES — las pinta js/skills.js desde js/data/skills.js -->
+    <section class="section container" id="habilidades" aria-labelledby="skills-title">
+      <div class="section__head">
+        <h2 class="section__title" id="skills-title">Habilidades</h2>
+        <p class="section__intro">Las tecnologías con las que trabajo a diario.</p>
+      </div>
+      <ul class="skills" id="skills-grid" role="list"></ul>
+    </section>
+
+    <!-- CONTACTO — corcho: nota (abre el correo), email, CV y perfiles. Datos en js/data/site.js -->
+    <section class="section container" id="contacto" aria-labelledby="contact-title">
+      <div class="section__head">
+        <h2 class="section__title" id="contact-title">¿Buscas a alguien para tu equipo? <span class="contact__accent">Hablemos.</span></h2>
+        <p class="section__intro">Clava una nota en mi corcho y te respondo lo antes posible. O coge directamente lo que necesites.</p>
+      </div>
+
+      <div class="cork">
+        <form class="cork-note" id="note-form" novalidate>
+          <span class="pin pin--red" aria-hidden="true"></span>
+          <h3 class="cork-note__title">Déjame una nota</h3>
+          <label class="cork-note__label" for="note-name">Tu nombre</label>
+          <input class="cork-note__input" id="note-name" name="name" type="text" autocomplete="name" placeholder="Nombre y empresa">
+          <label class="cork-note__label" for="note-msg">Tu mensaje</label>
+          <textarea class="cork-note__input cork-note__area" id="note-msg" name="message" rows="5" placeholder="Hola Jesús, tenemos un puesto que…" required></textarea>
+          <button class="btn btn--accent" type="submit">Clavar y enviar</button>
+          <p class="cork-note__hint">Se abrirá tu programa de correo con la nota lista para enviar.</p>
+        </form>
+
+        <ul class="cork__pins" role="list">
+          <li class="cork-card cork-card--email">
+            <span class="pin pin--blue" aria-hidden="true"></span>
+            <p class="cork-card__label mono">Email</p>
+            <a class="cork-card__email" id="contact-email" href="#">…</a>
+            <button class="btn btn--ink btn--sm" type="button" id="copy-email"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>Copiar email</button>
+            <span class="cork-card__status mono" id="copy-status" role="status"></span>
+          </li>
+          <li>
+            <a class="cork-card cork-card--cv" href="/cv/">
+              <span class="pin pin--yellow" aria-hidden="true"></span>
+              <span class="cork-card__title">Mi CV</span>
+              <span class="cork-card__sub mono">Ver e imprimir →</span>
+            </a>
+          </li>
+          <li>
+            <a class="cork-card cork-card--in" id="link-linkedin" target="_blank" rel="noopener">
+              <span class="pin pin--green" aria-hidden="true"></span>
+              <span class="cork-card__title">LinkedIn</span>
+              <span class="cork-card__sub mono">Ver perfil →</span>
+            </a>
+          </li>
+          <li>
+            <a class="cork-card cork-card--gh" id="link-github" target="_blank" rel="noopener">
+              <span class="pin pin--red" aria-hidden="true"></span>
+              <span class="cork-card__title">GitHub</span>
+              <span class="cork-card__sub mono">Ver perfil →</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p class="mono">© <span id="year"></span> Jesús Guerrero</p>
+    <ul class="footer-legal" role="list">
+      <li><a href="/aviso-legal/">Aviso legal</a></li>
+      <li><a href="/privacidad/">Privacidad</a></li>
+      <li><a href="/cookies/">Cookies</a></li>
+      <li><button type="button" data-cookie-settings>Configurar cookies</button></li>
+      <li><button type="button" data-open-terminal>&gt;_ Terminal</button></li>
+    </ul>
+  </footer>
+</body>
+</html>
