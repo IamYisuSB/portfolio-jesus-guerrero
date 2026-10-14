@@ -291,7 +291,7 @@ export const projects = [
     types: ['personal'],
     year: '2026',
     url: null,
-    repo: P,
+    repo: 'https://github.com/IamYisuSB/portfolio-jesus-guerrero',
     thumb: '/img/proyectos/este-portfolio/thumb.webp?v=2',
     gallery: [
       { src: '/img/proyectos/este-portfolio/01.webp?v=2', alt: { es: 'Mesa de trabajo interactiva en modo claro', en: 'Interactive desk in light mode' } },
