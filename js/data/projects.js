@@ -16,6 +16,7 @@
 //   desk        objeto en la mesa (opcional): tipo, posición en % y rotación
 //               (el móvil admite screen: { es, en } y la polaroid photo: { es, en })
 //   store       app móvil: { banner, icon, playStore, category } → ficha estilo Google Play
+//               (playStore con URL = insignia activa; [PLACEHOLDER] = "Próximamente")
 //               (gallery.src puede ser { es, en } para capturas por idioma)
 //   es / en     label, title, summary (tarjeta), description (ficha),
 //               role, challenge, work, result, cta
@@ -35,13 +36,13 @@ export const projects = [
     types: ['personal', 'ia'],
     year: '2026',
     url: null,
-    repo: null,
+    repo: 'https://github.com/IamYisuSB/kipack',
     thumb: '/img/proyectos/kipack/thumb.webp',
     // App móvil: la ficha se muestra como una página de Google Play
     store: {
       banner: '/img/proyectos/kipack/banner.webp',
       icon: '/img/proyectos/kipack/icon.webp',
-      playStore: P, // enlace de Google Play cuando se publique
+      playStore: 'https://play.google.com/store/apps/details?id=com.fooserd.kipack',
       category: { es: 'Viajes · IA', en: 'Travel · AI' },
     },
     gallery: [
@@ -52,7 +53,7 @@ export const projects = [
       { src: { es: '/img/proyectos/kipack/es-05.webp', en: '/img/proyectos/kipack/en-05.webp' }, alt: { es: 'Mapa de países visitados y programados', en: 'Map of visited and planned countries' } },
       { src: { es: '/img/proyectos/kipack/es-06.webp', en: '/img/proyectos/kipack/en-06.webp' }, alt: { es: 'Perfil y ajustes de la cuenta', en: 'Profile and account settings' } },
     ],
-    stack: ['Flutter', 'Dart', 'Open-Meteo API'],
+    stack: ['Flutter', 'Dart', 'Supabase', 'Open-Meteo API'],
     tools: [P],
     desk: { type: 'phone', x: 87, y: 28, rot: 6, screen: { es: '/img/proyectos/kipack/desk-es.webp', en: '/img/proyectos/kipack/desk-en.webp' } },
     es: {
@@ -63,7 +64,7 @@ export const projects = [
       role: 'Proyecto propio en solitario: idea, diseño de la app y desarrollo completo en Flutter.',
       challenge: 'Que no se te olvide nada al hacer la maleta. Las listas genéricas no tienen en cuenta el destino, el clima ni el tipo de viaje, y siempre acabas olvidando algo importante o cargando con cosas que no vas a usar.',
       work: 'Una app en Flutter para crear viajes (destino, fechas, tipo de viaje y actividades) que genera con IA la lista de equipaje a partir de la previsión del tiempo de Open-Meteo. La lista se organiza por categorías, se marca a medida que haces la maleta y muestra el progreso. Además, un mapa de países visitados y programados y la gestión de la cuenta.',
-      result: 'Preparada para publicarse en Google Play.',
+      result: 'Publicada y disponible para descargar en Google Play.',
       cta: null,
     },
     en: {
@@ -74,7 +75,7 @@ export const projects = [
       role: 'Solo project: idea, app design and full development in Flutter.',
       challenge: 'Never forgetting anything when packing. Generic lists ignore the destination, the weather and the type of trip, so you always end up forgetting something important or carrying things you will never use.',
       work: 'A Flutter app to create trips (destination, dates, trip type and activities) that uses AI to generate the packing list from the Open-Meteo weather forecast. The list is grouped by category, ticked off as you pack and shows your progress. It also includes a map of visited and planned countries and account management.',
-      result: 'Ready to be published on Google Play.',
+      result: 'Live and available to download on Google Play.',
       cta: null,
     },
   },
