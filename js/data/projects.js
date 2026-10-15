@@ -53,7 +53,7 @@ export const projects = [
       { src: { es: '/img/proyectos/kipack/es-05.webp', en: '/img/proyectos/kipack/en-05.webp' }, alt: { es: 'Mapa de países visitados y programados', en: 'Map of visited and planned countries' } },
       { src: { es: '/img/proyectos/kipack/es-06.webp', en: '/img/proyectos/kipack/en-06.webp' }, alt: { es: 'Perfil y ajustes de la cuenta', en: 'Profile and account settings' } },
     ],
-    stack: ['Flutter', 'Dart', 'Supabase', 'Open-Meteo API'],
+    stack: ['Flutter', 'Dart', 'Open-Meteo API'],
     tools: [P],
     desk: { type: 'phone', x: 87, y: 28, rot: 6, screen: { es: '/img/proyectos/kipack/desk-es.webp', en: '/img/proyectos/kipack/desk-en.webp' } },
     es: {
