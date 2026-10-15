@@ -14,14 +14,14 @@ const text = (s) => (s === PLACEHOLDER ? `<span class="is-placeholder">${s}</spa
 const L = {
   es: {
     open: 'Abrir el cajón', close: 'Cerrar el cajón', handle: 'cajón',
-    hobbies: 'Cuando no programo', music: 'Mi banda sonora', fact: 'Dato curioso',
+    hobbies: 'Cuando no programo', music: 'Mi banda sonora', fact: 'Datos curiosos',
     secret: 'Has encontrado el cajón 🎉',
     secretText: 'Te cuento otro secreto: esta web tiene una terminal escondida. Pulsa la tecla <kbd>º</kbd> (a la izquierda del 1) o el botón de abajo.',
     terminal: 'Abrir la terminal',
   },
   en: {
     open: 'Open the drawer', close: 'Close the drawer', handle: 'drawer',
-    hobbies: 'When I\'m not coding', music: 'My coding soundtrack', fact: 'Fun fact',
+    hobbies: 'When I\'m not coding', music: 'My coding soundtrack', fact: 'Fun facts',
     secret: 'You found the drawer 🎉',
     secretText: 'Here\'s another secret: this site has a hidden terminal. Press the <kbd>`</kbd> key (left of 1) or the button below.',
     terminal: 'Open the terminal',
@@ -55,12 +55,20 @@ export function initDrawer() {
   panel.id = 'drawer';
   panel.hidden = true;
   const li = (arr) => `<ul>${arr[lang].map((x) => `<li>${text(x)}</li>`).join('')}</ul>`;
+  const songs = `<div class="drawer__songs">${drawer.music.map((song) => `
+    <a class="drawer__song" href="${esc(song.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(`${song.title} — ${song.artist}`)}">
+      <img class="drawer__song-cover" src="${esc(song.cover)}" alt="" width="56" height="56" loading="lazy">
+      <span class="drawer__song-info">
+        <span class="drawer__song-title">${esc(song.title)}</span>
+        <span class="drawer__song-artist">${esc(song.artist)}</span>
+      </span>
+    </a>`).join('')}</div>`;
   panel.innerHTML = `
     <div class="drawer__inner">
       <div class="drawer__box">
         ${item('hobbies', L.hobbies, li(drawer.hobbies))}
-        ${item('music', L.music, li(drawer.music))}
-        ${item('fact', L.fact, `<p>${text(drawer.fact[lang])}</p>`)}
+        ${item('music', L.music, songs)}
+        ${item('fact', L.fact, li(drawer.fact))}
         ${item('secret', L.secret, `<p>${L.secretText}</p><button class="btn btn--ink btn--sm" type="button" data-open-terminal>&gt;_ ${L.terminal}</button>`, 'drawer__item--secret')}
       </div>
     </div>`;

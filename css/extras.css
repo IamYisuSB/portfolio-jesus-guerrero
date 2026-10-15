@@ -203,6 +203,23 @@ a.cork-card:hover { transform: translateY(-4px) rotate(0deg) !important; box-sha
 .drawer__title { font-size: 1rem; }
 .drawer__item ul { margin: 0; padding-left: 1.1em; display: grid; gap: 3px; font-size: .9375rem; }
 .drawer__item p { font-size: .9375rem; }
+.drawer__songs { display: grid; gap: 10px; }
+.drawer__song {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 10px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color .2s ease, translate .2s ease;
+}
+.drawer__song:hover { background: rgba(22, 32, 46, .08); translate: 2px 0; }
+.drawer__song:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.drawer__song-cover { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 9px; object-fit: cover; }
+.drawer__song-info { display: grid; gap: 3px; min-width: 0; }
+.drawer__song-title { font-weight: 700; }
+.drawer__song-artist { font-size: .875rem; opacity: .75; }
 .drawer__item kbd {
   padding: 1px 6px;
   border: 1px solid currentColor;
