@@ -9,3 +9,6 @@ img/proyectos/este-portfolio/kipack
 .vercel
 img/personal/me.webp
 img/personal/me-avatar.webp
+.astro
+dist
+.claude

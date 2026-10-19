@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada · Jesús Guerrero</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F4F7FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E141C" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Tema antes de pintar, para evitar parpadeo -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="preload" href="/fonts/figtree-latin-1.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/unbounded-latin-5.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css?v=48">
+
+  <link rel="stylesheet" href="/css/base.css?v=48">
+  <link rel="stylesheet" href="/css/layout.css?v=48">
+  <link rel="stylesheet" href="/css/desk.css?v=48">
+  <link rel="stylesheet" href="/css/sheet.css?v=48">
+  <link rel="stylesheet" href="/css/components.css?v=48">
+  <link rel="stylesheet" href="/css/legal.css?v=48">
+  <link rel="stylesheet" href="/css/extras.css?v=48">
+
+  <script type="module" src="/js/main.js?v=50"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principal">
+      <a class="nav__logo" href="/">jesús guerrero<span class="nav__dot">.</span></a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/proyectos/">Proyectos</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav__tools">
+        <a class="icon-btn mono" href="/en/" hreflang="en" lang="en" aria-label="English version">EN</a>
+        <button class="icon-btn" type="button" id="theme-toggle" aria-pressed="false">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <a class="btn btn--accent btn--sm" href="/cv/"><span class="nav__cta-long">Mi </span>CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-head page-head--narrow container">
+      <p class="page-head__back mono">Error 404</p>
+      <h1 class="page-head__title">Esta página no está en la mesa<span class="hero__dot">.</span></h1>
+      <p class="page-head__intro">Puede que el enlace esté mal escrito o que la página se haya movido.</p>
+      <p class="page-head__intro" lang="en">This page is not on the desk. The link may be mistyped or the page may have moved.</p>
+    </header>
+
+    <section class="section container">
+      <div class="cta-band">
+        <h2 class="cta-band__title">¿Por dónde seguimos?</h2>
+        <div class="cta-band__actions">
+          <a class="btn btn--ink" href="/">Ir al inicio</a>
+          <a class="btn btn--ghost" href="/proyectos/">Ver proyectos</a>
+          <a class="btn btn--ghost" href="/en/" hreflang="en" lang="en">English version</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p class="mono">© <span id="year"></span> Jesús Guerrero</p>
+    <ul class="footer-legal" role="list">
+      <li><a href="/aviso-legal/">Aviso legal</a></li>
+      <li><a href="/privacidad/">Privacidad</a></li>
+      <li><a href="/cookies/">Cookies</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

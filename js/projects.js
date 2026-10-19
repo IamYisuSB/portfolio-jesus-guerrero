@@ -13,7 +13,8 @@ function thumb(p) {
   const pick = (v) => (v && typeof v === 'object' ? v[lang] : v);
   const src = pick(p.thumb) || pick(p.gallery?.[0]?.src);
   if (src) {
-    return `<img class="card__img" src="${esc(src)}" alt="" width="800" height="500" loading="lazy" decoding="async">`;
+    const alt = t('project.thumbAlt').replace('{title}', p[lang].title);
+    return `<img class="card__img" src="${esc(src)}" alt="${esc(alt)}" width="800" height="500" loading="lazy" decoding="async">`;
   }
   return `
     <div class="card__mock" data-mock="${p.id}" aria-hidden="true">

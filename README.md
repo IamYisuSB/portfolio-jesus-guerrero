@@ -5,7 +5,7 @@
 **Portfolio personal de Jesús Guerrero, desarrollador web en Granada.**<br>
 Una mesa de trabajo interactiva: arrastra los objetos, lánzalos, haz que choquen y ábrelos para descubrir cada proyecto.
 
-[**Ver la web →**](https://portfolio-jesus-guerrero.vercel.app) &nbsp;·&nbsp; [English version](https://portfolio-jesus-guerrero.vercel.app/en/) &nbsp;·&nbsp; [CV](https://portfolio-jesus-guerrero.vercel.app/cv/)
+[**Ver la web →**](https://jesusgs.es) &nbsp;·&nbsp; [English version](https://jesusgs.es/en/) &nbsp;·&nbsp; [CV](https://jesusgs.es/cv/)
 
 ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)
@@ -31,7 +31,7 @@ Está hecho **a mano con HTML, CSS y JavaScript**, sin frameworks, sin librería
 | 🗃️ **Cajón secreto** | Un tirador en el borde de la mesa abre un cajón con lo personal… y una pista. |
 | ⌨️ **Terminal oculta** | Pulsa <kbd>º</kbd> (o <kbd>`</kbd>) y escribe `help`. Historial, autocompletado con <kbd>Tab</kbd> y algún easter egg (`sudo contratar`). |
 | 📌 **Contacto en un corcho** | Clava una nota y se abre tu programa de correo con el mensaje listo. Sin servidor ni formularios de terceros. |
-| 📄 **CV imprimible** | [`/cv/`](https://portfolio-jesus-guerrero.vercel.app/cv/) se monta con los mismos datos de la web y se guarda como PDF en una página A4. |
+| 📄 **CV imprimible** | [`/cv/`](https://jesusgs.es/cv/) se monta con los mismos datos de la web y se guarda como PDF en una página A4. |
 | 🔊 **Sonido opcional** | Papel, plástico y metal sintetizados con Web Audio, sin archivos. Desactivado por defecto. |
 | 🧑‍💻 **"Cómo está hecha"** | La ficha del sello *Sin frameworks* enseña el código de la física, comentado. |
 
