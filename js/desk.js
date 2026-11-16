@@ -73,7 +73,7 @@ const draw = {
   cv: () => `
     <span class="obj-cv__head">
       <i class="obj-cv__avatar">JG</i>
-      <span class="obj-cv__who"><b>Jesús Guerrero</b><small>${lang === 'en' ? 'Web developer' : 'Desarrollador web'}</small></span>
+      <span class="obj-cv__who"><b>Jesús Guerrero</b><small>${lang === 'en' ? 'Full stack developer' : 'Desarrollador full stack'}</small></span>
     </span>
     <span class="obj-cv__lines"><i></i><i></i><i></i><i></i><i></i></span>
     <span class="obj-cv__pdf">PDF ↓</span>`,
@@ -83,7 +83,7 @@ const draw = {
     <span class="obj-badge__top">${lang === 'en' ? 'OPEN TO WORK' : 'DISPONIBLE'}</span>
     <span class="obj-badge__avatar">JG</span>
     <span class="obj-badge__name">Jesús Guerrero</span>
-    <span class="obj-badge__role">${lang === 'en' ? 'Web developer' : 'Desarrollador web'}</span>
+    <span class="obj-badge__role">${lang === 'en' ? 'Full stack developer' : 'Desarrollador full stack'}</span>
     <span class="obj-badge__bar"></span>`,
 
   ticket: (p, c) => `

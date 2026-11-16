@@ -40,6 +40,12 @@ export const drawer = {
       cover: '/img/musica/mi-coleta.webp',
       url: 'https://open.spotify.com/intl-es/track/7EJDBVATR8jdE5b9Y7QEU9?si=81d7bc322f144b66',
     },
+    {
+      title: 'UNETHICAL',
+      artist: 'Faouzia',
+      cover: '/img/musica/unethical-faouzia.webp',
+      url: 'https://open.spotify.com/intl-es/track/50pVCaSPX0n4iaTvyk53zm',
+    },
   ],
   // Datos curiosos sobre ti
   fact: {

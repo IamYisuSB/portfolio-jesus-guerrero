@@ -4,10 +4,10 @@
 // ============================================================
 export const cv = {
   fullName: 'Jesús David Guerrero Sances',
-  role: { es: 'Desarrollador web', en: 'Web developer' },
+  role: { es: 'Desarrollador web full stack', en: 'Full stack web developer' },
   profile: {
-    es: 'Desarrollador web en Granada. Diseño y construyo webs y tiendas online con WordPress, WooCommerce y Astro, y estoy ampliando mi perfil hacia la programación web (cliente y servidor) con el certificado IFCD0210. Uso la inteligencia artificial a diario para programar y automatizar tareas, y desarrollo proyectos propios con IA. Busco incorporarme a un equipo en el que seguir creciendo.',
-    en: 'Web developer based in Granada, Spain. I design and build websites and online shops with WordPress, WooCommerce and Astro, and I am expanding into web programming (client and server side) through the IFCD0210 professional certificate. I use AI every day to code and automate tasks, and I build my own AI-powered projects. I am looking to join a team where I can keep growing.',
+    es: 'Desarrollador web full stack en Granada. Llevo años diseñando y construyendo webs y tiendas online con WordPress, Elementor y WooCommerce, y hoy desarrollo con código propio: HTML, CSS y JavaScript en cliente y PHP en servidor, con el respaldo del Certificado de Profesionalidad en Desarrollo de Aplicaciones con Tecnologías Web (IFCD0210). Uso la IA a diario para programar y automatizar procesos, y desarrollo chatbots y agentes con IA. Tras años como freelance, busco un puesto estable en un equipo donde seguir creciendo.',
+    en: 'Full stack web developer based in Granada, Spain. I have spent years designing and building websites and online shops with WordPress, Elementor and WooCommerce, and today I develop with my own code: HTML, CSS and JavaScript on the client and PHP on the server, backed by the Spanish Professional Certificate in Web Application Development (IFCD0210). I use AI every day to code and automate processes, and I build AI chatbots and agents. After years as a freelancer, I am looking for a stable role in a team where I can keep growing.',
   },
   // Proyectos que salen en el CV (ids de projects.js), en este orden
   projects: ['tienda-ubeda', 'eclipse-gibraltar', 'lezzgo-pizza', 'pixelote', 'kipack'],

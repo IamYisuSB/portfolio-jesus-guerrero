@@ -6,6 +6,7 @@
 import { lang } from './i18n.js';
 import { projects } from './data/projects.js';
 import { site } from './data/site.js';
+import { skills } from './data/skills.js';
 import { openSheet } from './sheet.js';
 import { toggleTheme } from './theme.js';
 import { soundOn, setSound } from './sound.js';
@@ -21,6 +22,7 @@ const L = {
       ['help', 'muestra esta ayuda'],
       ['whoami', 'quién soy'],
       ['proyectos', 'lista de proyectos'],
+      ['habilidades', 'tecnologías con las que trabajo'],
       ['abrir &lt;n&gt;', 'abre la ficha del proyecto n'],
       ['cv', 'abre mi currículum'],
       ['contacto', 'email y perfiles'],
@@ -30,7 +32,7 @@ const L = {
       ['clear', 'limpia la pantalla'],
       ['exit', 'cierra la terminal'],
     ],
-    whoami: 'Jesús Guerrero · Desarrollador web en Granada. WordPress, WooCommerce, JavaScript e IA aplicada. Buscando mi próximo equipo.',
+    whoami: 'Jesús Guerrero · Desarrollador web full stack en Granada. WordPress, WooCommerce, PHP y JavaScript, con uso intensivo de la IA (Claude Code, chatbots y agentes). Aprendiendo Go. Tras años como freelance, busco un puesto estable en un equipo.',
     projectsHint: 'Escribe <b>abrir 1</b> (o el número que quieras) para ver la ficha.',
     noProject: 'No existe ese proyecto. Escribe <b>proyectos</b> para ver la lista.',
     opening: (t) => `Abriendo «${t}»…`,
@@ -53,6 +55,7 @@ const L = {
       ['help', 'show this help'],
       ['whoami', 'who I am'],
       ['projects', 'list projects'],
+      ['skills', 'technologies I work with'],
       ['open &lt;n&gt;', 'open project n'],
       ['cv', 'open my résumé'],
       ['contact', 'email and profiles'],
@@ -62,7 +65,7 @@ const L = {
       ['clear', 'clear the screen'],
       ['exit', 'close the terminal'],
     ],
-    whoami: 'Jesús Guerrero · Web developer in Granada, Spain. WordPress, WooCommerce, JavaScript and applied AI. Looking for my next team.',
+    whoami: 'Jesús Guerrero · Full stack web developer in Granada, Spain. WordPress, WooCommerce, PHP and JavaScript, with heavy use of AI (Claude Code, chatbots and agents). Learning Go. After years as a freelancer, looking for a stable role in a team.',
     projectsHint: 'Type <b>open 1</b> (or any number) to see the details.',
     noProject: 'That project does not exist. Type <b>projects</b> to see the list.',
     opening: (t) => `Opening "${t}"…`,
@@ -102,6 +105,7 @@ const ALIAS = {
   help: 'help', ayuda: 'help', '?': 'help',
   whoami: 'whoami', sobre: 'whoami', about: 'whoami',
   proyectos: 'projects', projects: 'projects', ls: 'projects',
+  habilidades: 'skills', skills: 'skills', stack: 'skills',
   abrir: 'open', open: 'open',
   cv: 'cv', curriculum: 'cv', resume: 'cv',
   contacto: 'contact', contact: 'contact',
@@ -123,6 +127,10 @@ const COMMANDS = {
   projects() {
     print(list().map((p, i) => `<span class="term__num">${String(i + 1).padStart(2, ' ').replace(' ', '&nbsp;')}</span> ${esc(p[lang].title)} <span class="term__dim">· ${esc(p[lang].label)}</span>`).join('<br>'));
     print(L.projectsHint, 'term__dim');
+  },
+  skills() {
+    const name = (i) => (typeof i.name === 'string' ? i.name : i.name[lang]);
+    print(skills.map((g) => `<span class="term__cmd">${esc(g[lang])}</span><br>&nbsp;&nbsp;${g.items.map((i) => esc(name(i))).join(' · ')}`).join('<br>'));
   },
   open(arg) {
     const items = list();
