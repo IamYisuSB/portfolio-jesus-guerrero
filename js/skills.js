@@ -34,7 +34,7 @@ export function initSkills() {
           <li class="skill">
             ${icon(item)}
             <span class="skill__text">
-              <span class="skill__name">${esc(text(item.name))}</span>
+              <span class="skill__name">${esc(text(item.name))}${item.badge ? ` <span class="skill__badge mono">${esc(text(item.badge))}</span>` : ''}</span>
               <span class="skill__desc">${esc(item[lang])}</span>
             </span>
           </li>`).join('')}

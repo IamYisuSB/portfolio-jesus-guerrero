@@ -103,7 +103,7 @@
 }
 
 .hero__lead {
-  max-width: 44ch;
+  max-width: 54ch;
   margin-inline: auto;
   font-size: clamp(1.0625rem, 1.4vw, 1.2rem);
   color: var(--c-muted);

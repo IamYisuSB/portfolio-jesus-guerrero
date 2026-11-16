@@ -20,6 +20,11 @@ export const skills = [
         es: 'Layouts responsive y animación', en: 'Responsive layouts and motion' },
       { name: 'JavaScript', icon: 'javascript', kind: 'brand', color: '#F7DF1E', ink: '#16202E',
         es: 'Interacción y lógica en el navegador', en: 'Browser interactivity and logic' },
+      { name: 'PHP', icon: 'server', kind: 'line', color: '#777BB4',
+        es: 'Lógica de servidor, temas y plugins', en: 'Server-side logic, themes and plugins' },
+      { name: { es: 'Bases de datos (MySQL)', en: 'Databases (MySQL)' },
+        icon: 'database', kind: 'line', color: '#00758F',
+        es: 'Consultas SQL y modelado de datos', en: 'SQL queries and data modelling' },
     ],
   },
   {
@@ -50,6 +55,9 @@ export const skills = [
       { name: { es: 'Mantenimiento web', en: 'Website maintenance' },
         icon: 'wrench', kind: 'line', color: '#16202E',
         es: 'Actualizaciones y soporte continuo', en: 'Updates and ongoing support' },
+      { name: { es: 'Revisión de código generado por IA', en: 'Reviewing AI-generated code' },
+        icon: 'review', kind: 'line', color: '#2E9E6B',
+        es: 'Revisión y testeo antes de llevarlo a producción', en: 'Review and testing before it ships' },
     ],
   },
   {
@@ -62,6 +70,8 @@ export const skills = [
         es: 'Mi editor de código', en: 'My code editor' },
       { name: 'GitHub', icon: 'github', kind: 'brand', color: '#181717',
         es: 'Repositorios y control de versiones', en: 'Repositories and version control' },
+      { name: 'phpMyAdmin', icon: 'panel', kind: 'line', color: '#F29111', ink: '#16202E',
+        es: 'Gestión y mantenimiento de bases de datos', en: 'Database management and upkeep' },
     ],
   },
   {
@@ -81,6 +91,18 @@ export const skills = [
       { name: { es: 'Herramientas con IA', en: 'AI-powered tools' },
         icon: 'bolt', kind: 'line', color: '#7B5CFF',
         es: 'Prototipos con APIs de IA', en: 'Prototypes with AI APIs' },
+    ],
+  },
+  {
+    id: 'learning',
+    icon: 'book',
+    es: 'En aprendizaje',
+    en: 'Currently learning',
+    wide: true,
+    items: [
+      { name: 'Go', icon: 'go', kind: 'line', color: '#00ADD8',
+        badge: { es: 'En curso', en: 'In progress' },
+        es: 'Backend y APIs con un lenguaje compilado', en: 'Backend and APIs with a compiled language' },
     ],
   },
 ];
